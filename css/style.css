@@ -59,17 +59,103 @@ a {
   display: block;
 }
 
-.con-min-width {
-  min-width: 1080px;
+.svg-box {
+  line-height: 1;
 }
 
-.con {
-  width: 1080px;
+body {
+  word-break: keep-all;
 }
 
+.global-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: #fff;
+  height: 80px;
+}
+.global-header .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.global-header .logo {
+  flex-grow: 1;
+}
+.global-header .top-bar {
+  height: 100%;
+}
 .global-header .top-bar .top-bar__menu-list {
   display: flex;
+  height: 100%;
 }
-.global-header .top-bar .top-bar__menu-list .logo {
-  flex-grow: 1;
+.global-header .top-bar .top-bar__menu-list .menu-item > a {
+  position: relative;
+}
+.global-header .top-bar .top-bar__menu-list .menu-item > a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 3px solid #333;
+  pointer-events: none;
+  display: none;
+}
+.global-header .top-bar .top-bar__menu-list .menu-item > a:hover::after {
+  display: block;
+}
+.global-header .top-bar .top-bar__menu-list > li {
+  display: flex;
+  height: 100%;
+  font-size: 15px;
+  color: #333;
+}
+.global-header .top-bar .top-bar__menu-list > li a {
+  display: block;
+  text-align: center;
+}
+.global-header .top-bar .top-bar__menu-list > li a:hover {
+  text-decoration: underline;
+}
+.global-header .top-bar .top-bar__menu-list > li > a {
+  padding: 0 12px;
+  margin: 0 12px;
+  display: block;
+  height: 100%;
+}
+.global-header .top-bar .top-bar__menu-list > li > a span {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.global-header .top-bar .top-bar__menu-list > li:hover .second-menu {
+  display: flex;
+}
+.global-header .top-bar .top-bar__menu-list > li > .second-menu {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  z-index: 99;
+  top: 100%;
+  left: 0%;
+  background-color: #fff;
+  width: 100%;
+  padding: 60px 0 36px;
+}
+.global-header .top-bar .top-bar__menu-list > li > .second-menu > .second-menu-item {
+  width: 200px;
+}
+.global-header .top-bar .top-bar__menu-list > li > .second-menu > .second-menu-item > a > span {
+  font-size: 17px;
+}
+.global-header .top-bar .top-bar__menu-list > li > .second-menu > .second-menu-item > .third-menu {
+  padding: 24px 0 0;
+  font-size: 13px;
+}
+.global-header .top-bar .top-bar__menu-list > li > .second-menu > .second-menu-item > .third-menu > .third-menu-item {
+  margin: 0 0 24px;
 }
