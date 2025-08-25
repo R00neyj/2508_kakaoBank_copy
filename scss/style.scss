@@ -55,13 +55,12 @@ a {
 }
 
 // ----------------------------- custom -----------------------------
-:root {
-  $kakao-yellow: ffe400;
-}
+
+$kakaoYellow: ffe400;
 
 html {
   ::selection {
-    background-color: $kakao-yellow;
+    background-color: #ffe400;
   }
 }
 
@@ -103,30 +102,15 @@ body {
       .menu-item {
         > a {
           position: relative;
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-bottom: 2px solid #333;
-            pointer-events: none;
-            display: none;
-          }
-
-          &:hover {
-            &::after {
-              display: block;
-            }
-          }
         }
       }
 
       // site map
       > .site-map {
         height: auto;
+        border-bottom: 0px solid transparent !important;
+        position: relative;
+
         > a {
           padding: 0;
           &:hover {
@@ -149,6 +133,54 @@ body {
             }
           }
         }
+
+        // site map modal
+        > .site-map-modal {
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: 240px;
+          margin: 10px 0 0;
+          background-color: #fff;
+          white-space: nowrap;
+          transform: translateX(-50%);
+          border-radius: 8px;
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+          overflow: hidden;
+          visibility: hidden;
+
+          &.active {
+            visibility: visible;
+          }
+          .svg-box {
+            display: inline-block;
+            > svg {
+              width: 12px;
+            }
+          }
+
+          > li {
+            display: flex;
+            align-items: center;
+            padding: 0 24px;
+            height: 48px;
+
+            &:hover {
+              background-color: #f6f6f6;
+            }
+
+            > a {
+              justify-content: start;
+              font-size: 13px;
+              gap: 4px;
+            }
+          }
+        }
+      }
+
+      // langauage
+      > .language {
+        border-bottom: 0px solid transparent !important;
       }
 
       // global list style
@@ -157,6 +189,9 @@ body {
         height: 100%;
         font-size: 15px;
         color: #333;
+        box-sizing: border-box;
+        margin: 0 12px;
+        border-bottom: 2px solid transparent;
 
         a {
           display: flex;
@@ -169,7 +204,6 @@ body {
         }
         > a {
           padding: 0 12px;
-          margin: 0 12px;
           height: 100%;
 
           span {
@@ -178,6 +212,7 @@ body {
         }
 
         &:hover {
+          border-bottom: 2px solid #333;
           .container {
             display: flex;
           }

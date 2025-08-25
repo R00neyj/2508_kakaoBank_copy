@@ -64,11 +64,11 @@ a {
 }
 
 html ::-moz-selection {
-  background-color: gold;
+  background-color: #ffe400;
 }
 
 html ::selection {
-  background-color: gold;
+  background-color: #ffe400;
 }
 
 body {
@@ -103,22 +103,10 @@ body {
 .global-header .top-bar .top-bar__menu-list .menu-item > a {
   position: relative;
 }
-.global-header .top-bar .top-bar__menu-list .menu-item > a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 2px solid #333;
-  pointer-events: none;
-  display: none;
-}
-.global-header .top-bar .top-bar__menu-list .menu-item > a:hover::after {
-  display: block;
-}
 .global-header .top-bar .top-bar__menu-list > .site-map {
   height: auto;
+  border-bottom: 0px solid transparent !important;
+  position: relative;
 }
 .global-header .top-bar .top-bar__menu-list > .site-map > a {
   padding: 0;
@@ -141,11 +129,54 @@ body {
   display: inline-block;
   background-image: url(../images/svg_line_arrow_down.svg);
 }
+.global-header .top-bar .top-bar__menu-list > .site-map > .site-map-modal {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 240px;
+  margin: 10px 0 0;
+  background-color: #fff;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  visibility: hidden;
+}
+.global-header .top-bar .top-bar__menu-list > .site-map > .site-map-modal.active {
+  visibility: visible;
+}
+.global-header .top-bar .top-bar__menu-list > .site-map > .site-map-modal .svg-box {
+  display: inline-block;
+}
+.global-header .top-bar .top-bar__menu-list > .site-map > .site-map-modal .svg-box > svg {
+  width: 12px;
+}
+.global-header .top-bar .top-bar__menu-list > .site-map > .site-map-modal > li {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 48px;
+}
+.global-header .top-bar .top-bar__menu-list > .site-map > .site-map-modal > li:hover {
+  background-color: #f6f6f6;
+}
+.global-header .top-bar .top-bar__menu-list > .site-map > .site-map-modal > li > a {
+  justify-content: start;
+  font-size: 13px;
+  gap: 4px;
+}
+.global-header .top-bar .top-bar__menu-list > .language {
+  border-bottom: 0px solid transparent !important;
+}
 .global-header .top-bar .top-bar__menu-list > li {
   display: flex;
   height: 100%;
   font-size: 15px;
   color: #333;
+  box-sizing: border-box;
+  margin: 0 12px;
+  border-bottom: 2px solid transparent;
 }
 .global-header .top-bar .top-bar__menu-list > li a {
   display: flex;
@@ -157,11 +188,13 @@ body {
 }
 .global-header .top-bar .top-bar__menu-list > li > a {
   padding: 0 12px;
-  margin: 0 12px;
   height: 100%;
 }
 .global-header .top-bar .top-bar__menu-list > li > a span {
   display: block;
+}
+.global-header .top-bar .top-bar__menu-list > li:hover {
+  border-bottom: 2px solid #333;
 }
 .global-header .top-bar .top-bar__menu-list > li:hover .container {
   display: flex;
