@@ -3,10 +3,12 @@ function siteMapModal() {
   const siteMapModal = siteMap.querySelector(".site-map-modal");
 
   siteMap.addEventListener("click", () => {
-    if (siteMapModal.classList.contains("active")) {
+    if (siteMap.classList.contains("modalActive")) {
       siteMapModal.classList.remove("active");
+      siteMap.classList.remove("modalActive");
     } else {
       siteMapModal.classList.add("active");
+      siteMap.classList.add("modalActive");
     }
   });
 }

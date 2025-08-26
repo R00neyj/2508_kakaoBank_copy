@@ -123,6 +123,7 @@ body {
             padding: 8px 12px;
             border-radius: 999px;
 
+            // drop down arrow
             &::after {
               content: "";
               width: 12px;
@@ -130,7 +131,14 @@ body {
               margin-left: 12px;
               display: inline-block;
               background-image: url(../images/svg_line_arrow_down.svg);
+              transition: all 0.3s;
             }
+          }
+        }
+
+        &.modalActive {
+          > a > span::after {
+            transform: rotate(-180deg);
           }
         }
 
@@ -143,15 +151,20 @@ body {
           margin: 10px 0 0;
           background-color: #fff;
           white-space: nowrap;
-          transform: translateX(-50%);
+          transform: translateX(-50%) translateY(-10%);
           border-radius: 8px;
           box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
           overflow: hidden;
           visibility: hidden;
+          opacity: 0;
+          transition: all 0.3s;
 
           &.active {
             visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(-0%);
           }
+
           .svg-box {
             display: inline-block;
             > svg {
@@ -202,6 +215,20 @@ body {
             text-decoration: underline;
           }
         }
+
+        // outlink
+        a[target="_blank"] {
+          &::after {
+            content: "";
+            display: block;
+            background-image: url(../images/svg_line_outlink.svg);
+            background-size: 14px 14px;
+            width: 14px;
+            height: 14px;
+            margin-left: 4px;
+          }
+        }
+
         > a {
           padding: 0 12px;
           height: 100%;
@@ -235,8 +262,22 @@ body {
             display: flex;
             justify-content: space-around;
             width: 1080px;
+
             > .second-menu-item {
               > a {
+                // outlink 2nd menu
+                &[target="_blank"] {
+                  &::after {
+                    content: "";
+                    display: block;
+                    background-image: url(../images/svg_line_outlink.svg);
+                    background-size: 18px 18px;
+                    width: 18px;
+                    height: 18px;
+                    margin-left: 6px;
+                  }
+                }
+
                 > span {
                   font-size: 17px;
                 }
