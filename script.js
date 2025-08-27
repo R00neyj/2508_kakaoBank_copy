@@ -2,15 +2,29 @@ function siteMapModal() {
   const siteMap = document.querySelector(".site-map");
   const siteMapModal = siteMap.querySelector(".site-map-modal");
 
+  function modalClose() {
+    siteMapModal.classList.remove("active");
+    siteMap.classList.remove("modalActive");
+  }
+  function modalOpen() {
+    siteMapModal.classList.add("active");
+    siteMap.classList.add("modalActive");
+  }
+
   siteMap.addEventListener("click", () => {
     if (siteMap.classList.contains("modalActive")) {
-      siteMapModal.classList.remove("active");
-      siteMap.classList.remove("modalActive");
+      modalClose();
     } else {
-      siteMapModal.classList.add("active");
-      siteMap.classList.add("modalActive");
+      modalOpen();
     }
+
+    window.addEventListener("click", (e) => {
+      if (!e.target.closest(".site-map")) {
+        modalClose();
+      }
+    });
   });
 }
-
-siteMapModal();
+document.addEventListener("DOMContentLoaded", function () {
+  siteMapModal();
+});

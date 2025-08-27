@@ -68,7 +68,7 @@ body {
   word-break: keep-all;
 }
 
-// header start
+// ----------------------------- header start -----------------------------
 .global-header {
   position: fixed;
   top: 0;
@@ -102,13 +102,18 @@ body {
       .menu-item {
         > a {
           position: relative;
+          box-sizing: border-box;
+          border-bottom: 2px solid transparent;
+        }
+
+        &:hover > a {
+          border-bottom: 2px solid #222;
         }
       }
 
       // site map
       > .site-map {
         height: auto;
-        border-bottom: 0px solid transparent !important;
         position: relative;
 
         > a {
@@ -193,7 +198,6 @@ body {
 
       // langauage
       > .language {
-        border-bottom: 0px solid transparent !important;
       }
 
       // global list style
@@ -204,7 +208,6 @@ body {
         color: #333;
         box-sizing: border-box;
         margin: 0 12px;
-        border-bottom: 2px solid transparent;
 
         a {
           display: flex;
@@ -239,7 +242,6 @@ body {
         }
 
         &:hover {
-          border-bottom: 2px solid #333;
           .container {
             display: flex;
           }
@@ -298,3 +300,9 @@ body {
     }
   }
 }
+// ----------------------------- header end -----------------------------
+// ----------------------------- main start -----------------------------
+// ----------------------------- section1 start -----------------------------
+
+// ----------------------------- section1 end -----------------------------
+// ----------------------------- main end -----------------------------

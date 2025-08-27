@@ -102,10 +102,14 @@ body {
 }
 .global-header .top-bar .top-bar__menu-list .menu-item > a {
   position: relative;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+}
+.global-header .top-bar .top-bar__menu-list .menu-item:hover > a {
+  border-bottom: 2px solid #222;
 }
 .global-header .top-bar .top-bar__menu-list > .site-map {
   height: auto;
-  border-bottom: 0px solid transparent !important;
   position: relative;
 }
 .global-header .top-bar .top-bar__menu-list > .site-map > a {
@@ -174,9 +178,6 @@ body {
   font-size: 13px;
   gap: 4px;
 }
-.global-header .top-bar .top-bar__menu-list > .language {
-  border-bottom: 0px solid transparent !important;
-}
 .global-header .top-bar .top-bar__menu-list > li {
   display: flex;
   height: 100%;
@@ -184,7 +185,6 @@ body {
   color: #333;
   box-sizing: border-box;
   margin: 0 12px;
-  border-bottom: 2px solid transparent;
 }
 .global-header .top-bar .top-bar__menu-list > li a {
   display: flex;
@@ -209,9 +209,6 @@ body {
 }
 .global-header .top-bar .top-bar__menu-list > li > a span {
   display: block;
-}
-.global-header .top-bar .top-bar__menu-list > li:hover {
-  border-bottom: 2px solid #333;
 }
 .global-header .top-bar .top-bar__menu-list > li:hover .container {
   display: flex;
