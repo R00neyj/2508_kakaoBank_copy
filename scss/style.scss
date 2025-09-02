@@ -1,5 +1,5 @@
 // font
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+// @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 // ----------------------------- normalize -----------------------------
 body,
@@ -68,6 +68,14 @@ a {
 
 $kakaoYellow: ffe400;
 
+// ----------------------------- component -----------------------------
+.img-ico {
+  display: inline-block;
+  background: url(../images/imgi_22_img_kabang_250717.png), no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
 html {
   ::selection {
     background-color: #ffe400;
@@ -76,7 +84,7 @@ html {
 
 body {
   word-break: keep-all;
-  font: "Pretendard", sans-serif;
+  font-family: "Pretendard", sans-serif;
 }
 
 // ----------------------------- header start -----------------------------
@@ -200,7 +208,7 @@ body {
 
             > a {
               justify-content: start;
-              font-size: 13px;
+              font-size: 14px;
               gap: 4px;
             }
           }
@@ -208,14 +216,12 @@ body {
       }
 
       // langauage
-      > .language {
-      }
 
       // global list style
       > li {
         display: flex;
         height: 100%;
-        font-size: 15px;
+        font-size: 16px;
         color: #333;
         box-sizing: border-box;
         margin: 0 12px;
@@ -292,14 +298,14 @@ body {
                 }
 
                 > span {
-                  font-size: 17px;
+                  font-size: 18px;
                 }
               }
 
               // third menu start
               > .third-menu {
                 padding: 24px 0 0;
-                font-size: 13px;
+                font-size: 14px;
                 > .third-menu-item {
                   margin: 0 0 24px;
                 }
@@ -334,10 +340,10 @@ main {
     width: 1200px;
 
     .main-bg {
-      background-image: url(../images/main-bg3.png);
+      background-image: url(../images/imgi_21_main-bg3.png);
       height: 884px;
       background-position: center;
-      background-repeat: none;
+      background-repeat: no-repeat;
       background-size: cover;
       position: relative;
 
@@ -348,15 +354,16 @@ main {
         position: absolute;
         top: 135px;
         left: 90px;
-        font-size: 16px;
+        font-size: 17px;
 
         h3 {
-          font-size: 49px;
+          font-size: 52px;
           font-weight: 700;
         }
 
         p {
-          line-height: 1.95;
+          line-height: 1.75;
+          font-weight: 300;
         }
 
         ul {
@@ -369,16 +376,26 @@ main {
               display: flex;
               justify-content: center;
               align-items: center;
+              gap: 6px;
               width: 178px;
               height: 56px;
               background-color: #fff;
               border-radius: 12px;
               font-weight: 600;
-              font-size: 16.2px;
+              font-size: 18px;
 
-              .img-kabang {
-                display: inline-block;
-                vertical-align: center;
+              .ico-appG {
+                background-position: -341px -292px;
+              }
+
+              .ico-appA {
+                background-position: -371px -292px;
+              }
+            }
+
+            &:hover {
+              a {
+                text-decoration: underline;
               }
             }
           }

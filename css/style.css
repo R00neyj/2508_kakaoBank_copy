@@ -1,4 +1,3 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 body,
 ul,
 li,
@@ -71,6 +70,13 @@ a {
   line-height: 1;
 }
 
+.img-ico {
+  display: inline-block;
+  background: url(../images/imgi_22_img_kabang_250717.png), no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
 html ::-moz-selection {
   background-color: #ffe400;
 }
@@ -81,7 +87,7 @@ html ::selection {
 
 body {
   word-break: keep-all;
-  font: "Pretendard", sans-serif;
+  font-family: "Pretendard", sans-serif;
 }
 
 .global-header {
@@ -184,13 +190,13 @@ body {
 }
 .global-header .top-bar .top-bar__menu-list > .site-map > .site-map-modal > li > a {
   justify-content: start;
-  font-size: 13px;
+  font-size: 14px;
   gap: 4px;
 }
 .global-header .top-bar .top-bar__menu-list > li {
   display: flex;
   height: 100%;
-  font-size: 15px;
+  font-size: 16px;
   color: #333;
   box-sizing: border-box;
   margin: 0 12px;
@@ -249,11 +255,11 @@ body {
   margin-left: 6px;
 }
 .global-header .top-bar .top-bar__menu-list > li > .container > .second-menu > .second-menu-item > a > span {
-  font-size: 17px;
+  font-size: 18px;
 }
 .global-header .top-bar .top-bar__menu-list > li > .container > .second-menu > .second-menu-item > .third-menu {
   padding: 24px 0 0;
-  font-size: 13px;
+  font-size: 14px;
 }
 .global-header .top-bar .top-bar__menu-list > li > .container > .second-menu > .second-menu-item > .third-menu > .third-menu-item {
   margin: 0 0 24px;
@@ -278,10 +284,10 @@ main {
   width: 1200px;
 }
 .section1 .container .main-bg {
-  background-image: url(../images/main-bg3.png);
+  background-image: url(../images/imgi_21_main-bg3.png);
   height: 884px;
   background-position: center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -292,14 +298,15 @@ main {
   position: absolute;
   top: 135px;
   left: 90px;
-  font-size: 16px;
+  font-size: 17px;
 }
 .section1 .container .main-bg .text-box h3 {
-  font-size: 49px;
+  font-size: 52px;
   font-weight: 700;
 }
 .section1 .container .main-bg .text-box p {
-  line-height: 1.95;
+  line-height: 1.75;
+  font-weight: 300;
 }
 .section1 .container .main-bg .text-box ul {
   display: flex;
@@ -310,14 +317,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 6px;
   width: 178px;
   height: 56px;
   background-color: #fff;
   border-radius: 12px;
   font-weight: 600;
-  font-size: 16.2px;
+  font-size: 18px;
 }
-.section1 .container .main-bg .text-box ul li a .img-kabang {
-  display: inline-block;
-  vertical-align: center;
+.section1 .container .main-bg .text-box ul li a .ico-appG {
+  background-position: -341px -292px;
+}
+.section1 .container .main-bg .text-box ul li a .ico-appA {
+  background-position: -371px -292px;
+}
+.section1 .container .main-bg .text-box ul li:hover a {
+  text-decoration: underline;
 }
