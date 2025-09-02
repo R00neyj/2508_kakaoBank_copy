@@ -65,7 +65,7 @@ a {
 }
 
 // ----------------------------- custom -----------------------------
-
+// variable
 $kakaoYellow: ffe400;
 
 // ----------------------------- component -----------------------------
@@ -76,6 +76,33 @@ $kakaoYellow: ffe400;
   height: 24px;
 }
 
+.btn-gray {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 17px;
+  background-color: #f6f6f6;
+
+  a {
+    display: inline-block;
+  }
+  .btn-arr {
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    background: url(../images/imgi_2_home_arr.png), no-repeat;
+    background-size: cover;
+  }
+
+  &:hover {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+// body,html
 html {
   ::selection {
     background-color: #ffe400;
