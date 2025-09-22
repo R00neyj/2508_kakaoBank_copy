@@ -350,6 +350,15 @@ main {
   margin-top: 80px;
 }
 
+// section common settings
+section {
+  .container {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+  }
+}
 // ----------------------------- section1 start -----------------------------
 
 .section1 {
@@ -365,6 +374,7 @@ main {
   }
   .container {
     width: 1200px;
+    display: block;
 
     .main-bg {
       background-image: url(../images/imgi_21_main-bg3.png);
@@ -395,7 +405,7 @@ main {
 
         ul {
           display: flex;
-          padding: 24px 0 0 6px;
+          padding: 24px 0 0 0px;
           gap: 12px;
 
           li {
@@ -433,4 +443,75 @@ main {
 }
 
 // ----------------------------- section1 end -----------------------------
+
+// ----------------------------- section 2 - 6 common settings -----------------------------
+.md_sec {
+  > .container {
+    > .img-box {
+      > img {
+        width: 473px;
+      }
+    }
+    > .text-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      > h3 {
+        font-size: 40px;
+        line-height: 1.3;
+      }
+
+      > p {
+        margin-top: 24px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+
+      > .btn-box {
+        display: flex;
+        margin-top: 40px;
+        gap: 6px;
+
+        > a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 258px;
+          height: 56px;
+          background-color: #f6f6f6;
+          border-radius: 10px;
+          font-size: 17px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          > img {
+            width: 6px;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+// ----------------------------- section3 start -----------------------------
+.section3 {
+  > .container {
+    flex-direction: row-reverse;
+
+    .img-box {
+      width: 409px;
+    }
+
+    .btn-box {
+      > a {
+        width: 158px !important;
+      }
+    }
+  }
+}
+
 // ----------------------------- main end -----------------------------

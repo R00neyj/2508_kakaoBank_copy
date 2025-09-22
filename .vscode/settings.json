@@ -7,5 +7,6 @@
       "savePath": "~/../css" // 내가 원하는 css 저장 폴더 경로 설정
     }
   ],
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.port": 5501
 }
