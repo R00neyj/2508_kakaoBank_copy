@@ -354,10 +354,13 @@ main {
 section {
   .container {
     width: 1200px;
-    display: flex;
-    justify-content: center;
-    gap: 90px;
   }
+}
+
+// section divider
+.section-divider {
+  height: 32px;
+  background-color: #fafafa;
 }
 // ----------------------------- section1 start -----------------------------
 
@@ -446,19 +449,31 @@ section {
 
 // ----------------------------- section 2 - 6 common settings -----------------------------
 .md_sec {
+  height: 750px;
+
   > .container {
+    display: flex;
+    justify-content: center;
+    gap: 96px;
+    height: 100%;
+
     > .img-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       > img {
         width: 473px;
       }
     }
+
     > .text-box {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding: 0 24px;
 
       > h3 {
-        font-size: 40px;
+        font-size: 42px;
         line-height: 1.3;
       }
 
@@ -501,14 +516,52 @@ section {
 .section3 {
   > .container {
     flex-direction: row-reverse;
+    padding-left: 120px;
 
     .img-box {
-      width: 409px;
+      > img {
+        width: 409px;
+      }
     }
 
     .btn-box {
       > a {
         width: 158px !important;
+      }
+    }
+
+    .img-box-2 {
+      margin-top: 60px;
+      > img {
+        width: 440px;
+      }
+    }
+  }
+}
+// ----------------------------- section3 end -----------------------------
+// ----------------------------- section5 start -----------------------------
+.section5 {
+  > .container {
+    flex-direction: row-reverse;
+    padding-left: 76px;
+
+    .img-box {
+      > img {
+        width: 492px;
+      }
+    }
+  }
+}
+// ----------------------------- section6 start -----------------------------
+.section6 {
+  background-image: url(/images/imgi_23_home_map.png);
+  background-repeat: no-repeat;
+  background-position: -160px;
+
+  > .container {
+    .img-box {
+      > img {
+        width: 409px;
       }
     }
   }

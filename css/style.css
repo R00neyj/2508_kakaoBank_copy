@@ -293,9 +293,11 @@ main {
 
 section .container {
   width: 1200px;
-  display: flex;
-  justify-content: center;
-  gap: 90px;
+}
+
+.section-divider {
+  height: 32px;
+  background-color: #fafafa;
 }
 
 .section1 {
@@ -365,6 +367,20 @@ section .container {
   text-decoration: underline;
 }
 
+.md_sec {
+  height: 750px;
+}
+.md_sec > .container {
+  display: flex;
+  justify-content: center;
+  gap: 96px;
+  height: 100%;
+}
+.md_sec > .container > .img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .md_sec > .container > .img-box > img {
   width: 473px;
 }
@@ -372,9 +388,10 @@ section .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 24px;
 }
 .md_sec > .container > .text-box > h3 {
-  font-size: 40px;
+  font-size: 42px;
   line-height: 1.3;
 }
 .md_sec > .container > .text-box > p {
@@ -408,10 +425,34 @@ section .container {
 
 .section3 > .container {
   flex-direction: row-reverse;
+  padding-left: 120px;
 }
-.section3 > .container .img-box {
+.section3 > .container .img-box > img {
   width: 409px;
 }
 .section3 > .container .btn-box > a {
   width: 158px !important;
+}
+.section3 > .container .img-box-2 {
+  margin-top: 60px;
+}
+.section3 > .container .img-box-2 > img {
+  width: 440px;
+}
+
+.section5 > .container {
+  flex-direction: row-reverse;
+  padding-left: 76px;
+}
+.section5 > .container .img-box > img {
+  width: 492px;
+}
+
+.section6 {
+  background-image: url(/images/imgi_23_home_map.png);
+  background-repeat: no-repeat;
+  background-position: -160px;
+}
+.section6 > .container .img-box > img {
+  width: 409px;
 }
