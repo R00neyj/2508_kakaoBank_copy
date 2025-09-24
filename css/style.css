@@ -369,6 +369,7 @@ section .container {
 
 .md_sec {
   height: 750px;
+  overflow: hidden;
 }
 .md_sec > .container {
   display: flex;
@@ -380,6 +381,7 @@ section .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.8s 0.5s;
 }
 .md_sec > .container > .img-box > img {
   width: 473px;
@@ -423,6 +425,16 @@ section .container {
   margin-left: 6px;
 }
 
+.section3.animate-init .img-box {
+  transform: translateX(25%);
+  opacity: 0;
+}
+
+.section3.animate .img-box {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
 .section3 > .container {
   flex-direction: row-reverse;
   padding-left: 120px;
@@ -448,6 +460,16 @@ section .container {
   width: 492px;
 }
 
+.section6.animate-init .img-box {
+  transform: translate(0, 25%);
+  opacity: 0;
+}
+
+.section6.animate .img-box {
+  transform: translateX(0, 0);
+  opacity: 1;
+}
+
 .section6 {
   background-image: url(/images/imgi_23_home_map.png);
   background-repeat: no-repeat;
@@ -455,4 +477,89 @@ section .container {
 }
 .section6 > .container .img-box > img {
   width: 409px;
+}
+
+@keyframes star {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.section7.animate-init .bg.bg-night {
+  top: 100%;
+}
+
+.section7.animate .bg.bg-night {
+  top: 0%;
+}
+
+.section7 {
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+}
+.section7 .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 1s 2s;
+}
+.section7 .bg-night {
+  background-color: #343b56;
+  z-index: -1;
+}
+.section7 .bg-day {
+  background-color: #669ad9;
+  z-index: -2;
+}
+.section7 .text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 160px;
+  gap: 32px;
+}
+.section7 .text-box h3 {
+  font-size: 48px;
+}
+.section7 .text-box p {
+  font-size: 18px;
+  font-weight: 300;
+}
+.section7 .img-box {
+  display: flex;
+  justify-content: center;
+}
+.section7 .img-box img {
+  width: 470px;
+}
+.section7 .btn-box-wrap {
+  display: flex;
+  gap: 6px;
+}
+.section7 .btn-box-wrap .btn-box {
+  display: flex;
+  gap: 6px;
+}
+.section7 .btn-box-wrap .btn-box > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 56px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 17px;
+}
+.section7 .btn-box-wrap .btn-box > a:hover {
+  text-decoration: underline;
+}
+.section7 .btn-box-wrap .btn-box > a > img {
+  width: 6px;
+  margin-left: 6px;
 }
