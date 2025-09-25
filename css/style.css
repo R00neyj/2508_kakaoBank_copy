@@ -482,17 +482,33 @@ section .container {
 @keyframes star {
   0% {
     opacity: 0;
+    transform: scale(0.25);
   }
   100% {
     opacity: 1;
+    transform: scale(1);
   }
 }
 .section7.animate-init .bg.bg-night {
   top: 100%;
 }
+.section7.animate-init .bg-moon > .moon-out {
+  transform: translate(-100%, -100%);
+  opacity: 0;
+}
+.section7.animate-init .bg-star {
+  opacity: 0;
+}
 
 .section7.animate .bg.bg-night {
   top: 0%;
+}
+.section7.animate .bg-moon > .moon-out {
+  opacity: 1;
+  transform: translate(-25%, -25%);
+}
+.section7.animate .bg-star {
+  opacity: 1;
 }
 
 .section7 {
@@ -517,6 +533,8 @@ section .container {
   z-index: -2;
 }
 .section7 .text-box {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -532,6 +550,8 @@ section .container {
   font-weight: 300;
 }
 .section7 .img-box {
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: center;
 }
@@ -562,4 +582,85 @@ section .container {
 .section7 .btn-box-wrap .btn-box > a > img {
   width: 6px;
   margin-left: 6px;
+}
+.section7 .bg-moon {
+  position: absolute;
+  top: 22%;
+  right: 17%;
+  overflow: hidden;
+}
+.section7 .bg-moon .moon {
+  width: 110px;
+  height: 110px;
+  border-radius: 999px;
+  background-color: #fff;
+}
+.section7 .bg-moon .moon-out {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 120px;
+  height: 120px;
+  background-color: #343b56;
+  transition: transform 0.7s, opacity 0s;
+  transition-delay: 2.35s;
+}
+.section7 .bg-star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s;
+  transition-delay: 2.4s;
+}
+.section7 .bg-star .star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: #fff;
+  animation-iteration-count: infinite;
+  animation-name: star;
+  animation-direction: alternate;
+}
+.section7 .bg-star .star-1 {
+  top: 10%;
+  left: 5%;
+  animation-duration: 2s;
+}
+.section7 .bg-star .star-2 {
+  top: 20%;
+  left: 20%;
+  animation-duration: 3s;
+}
+.section7 .bg-star .star-3 {
+  top: 11%;
+  left: 17%;
+  animation-duration: 4s;
+}
+.section7 .bg-star .star-4 {
+  top: 50%;
+  left: 80%;
+  animation-duration: 3s;
+}
+.section7 .bg-star .star-5 {
+  top: 70%;
+  left: 90%;
+  animation-duration: 2s;
+}
+.section7 .bg-star .star-6 {
+  top: 20%;
+  left: 80%;
+  animation-duration: 3s;
+}
+.section7 .bg-star .star-7 {
+  top: 30%;
+  left: 90%;
+  animation-duration: 4s;
+}
+.section7 .bg-star .star-8 {
+  top: 90%;
+  left: 25%;
+  animation-duration: 5s;
 }

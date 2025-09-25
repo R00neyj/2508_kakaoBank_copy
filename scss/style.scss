@@ -622,19 +622,43 @@ section {
 @keyframes star {
   0% {
     opacity: 0;
+    transform: scale(0.25);
   }
   100% {
     opacity: 1;
+    transform: scale(1);
   }
 }
 .section7.animate-init {
   .bg.bg-night {
     top: 100%;
   }
+
+  .bg-moon {
+    > .moon-out {
+      transform: translate(-100%, -100%);
+      opacity: 0;
+    }
+  }
+
+  .bg-star {
+    opacity: 0;
+  }
 }
 .section7.animate {
   .bg.bg-night {
     top: 0%;
+  }
+
+  .bg-moon {
+    > .moon-out {
+      opacity: 1;
+      transform: translate(-25%, -25%);
+    }
+  }
+
+  .bg-star {
+    opacity: 1;
   }
 }
 
@@ -662,6 +686,8 @@ section {
 
   // sec-7 text-box
   .text-box {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -681,6 +707,8 @@ section {
 
   // sec-7 img-box
   .img-box {
+    position: relative;
+    z-index: 10;
     display: flex;
     justify-content: center;
     img {
@@ -715,6 +743,92 @@ section {
           width: 6px;
           margin-left: 6px;
         }
+      }
+    }
+  }
+
+  .bg-moon {
+    position: absolute;
+    top: 22%;
+    right: 17%;
+    overflow: hidden;
+    .moon {
+      width: 110px;
+      height: 110px;
+      border-radius: 999px;
+      background-color: #fff;
+    }
+    .moon-out {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 120px;
+      height: 120px;
+
+      background-color: #343b56;
+      transition: transform 0.7s, opacity 0s;
+      transition-delay: 2.35s;
+    }
+  }
+
+  .bg-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s;
+    transition-delay: 2.4s;
+
+    .star {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 99px;
+      background-color: #fff;
+      animation-iteration-count: infinite;
+      animation-name: star;
+      animation-direction: alternate;
+
+      &-1 {
+        top: 10%;
+        left: 5%;
+        animation-duration: 2s;
+      }
+      &-2 {
+        top: 20%;
+        left: 20%;
+        animation-duration: 3s;
+      }
+      &-3 {
+        top: 11%;
+        left: 17%;
+        animation-duration: 4s;
+      }
+      &-4 {
+        top: 50%;
+        left: 80%;
+        animation-duration: 3s;
+      }
+      &-5 {
+        top: 70%;
+        left: 90%;
+        animation-duration: 2s;
+      }
+      &-6 {
+        top: 20%;
+        left: 80%;
+        animation-duration: 3s;
+      }
+      &-7 {
+        top: 30%;
+        left: 90%;
+        animation-duration: 4s;
+      }
+      &-8 {
+        top: 90%;
+        left: 25%;
+        animation-duration: 5s;
       }
     }
   }
