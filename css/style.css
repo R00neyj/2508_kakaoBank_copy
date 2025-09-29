@@ -294,6 +294,28 @@ main {
 section .container {
   width: 1200px;
 }
+section .btn-box {
+  display: flex;
+  margin-top: 40px;
+  gap: 6px;
+}
+section .btn-box > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 258px;
+  height: 56px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  font-size: 17px;
+}
+section .btn-box > a:hover {
+  text-decoration: underline;
+}
+section .btn-box > a > img {
+  width: 6px;
+  margin-left: 6px;
+}
 
 .section-divider {
   height: 32px;
@@ -402,28 +424,6 @@ section .container {
   font-weight: 300;
   line-height: 1.6;
 }
-.md_sec > .container > .text-box > .btn-box {
-  display: flex;
-  margin-top: 40px;
-  gap: 6px;
-}
-.md_sec > .container > .text-box > .btn-box > a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 258px;
-  height: 56px;
-  background-color: #f6f6f6;
-  border-radius: 10px;
-  font-size: 17px;
-}
-.md_sec > .container > .text-box > .btn-box > a:hover {
-  text-decoration: underline;
-}
-.md_sec > .container > .text-box > .btn-box > a > img {
-  width: 6px;
-  margin-left: 6px;
-}
 
 .section3.animate-init .img-box {
   transform: translateX(25%);
@@ -522,7 +522,7 @@ section .container {
   left: 0;
   height: 100%;
   width: 100%;
-  transition: all 1s 2s;
+  transition: all 1s 1s;
 }
 .section7 .bg-night {
   background-color: #343b56;
@@ -663,4 +663,53 @@ section .container {
   top: 90%;
   left: 25%;
   animation-duration: 5s;
+}
+
+.section8 .container {
+  padding: 150px 0 0;
+  position: relative;
+}
+.section8 .container .text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.section8 .container .text-box h3 {
+  font-size: 42px;
+}
+.section8 .container .text-box p {
+  margin-top: 30px;
+  font-size: 17px;
+}
+.section8 .container .card-swiper {
+  width: 720px;
+  margin: 100px auto;
+  overflow-x: hidden;
+  padding: 50px 0;
+}
+.section8 .container .card-swiper .swiper-wrapper .swiper-slide {
+  width: 240px;
+  transition: transform 0.3s;
+}
+.section8 .container .card-swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.section8 .container .card-swiper .swiper-wrapper .swiper-slide-active {
+  width: 280px;
+  transform: scale(1.25);
+  z-index: 1;
+}
+.section8 .container .btn {
+  position: absolute;
+  top: 70%;
+  cursor: pointer;
+}
+.section8 .container .prev-btn {
+  left: 5%;
+}
+.section8 .container .next-btn {
+  right: 5%;
 }

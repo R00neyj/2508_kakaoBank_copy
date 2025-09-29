@@ -350,10 +350,38 @@ main {
   margin-top: 80px;
 }
 
+// component
 // section common settings
 section {
   .container {
     width: 1200px;
+  }
+
+  // btn style
+  .btn-box {
+    display: flex;
+    margin-top: 40px;
+    gap: 6px;
+
+    > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 258px;
+      height: 56px;
+      background-color: #f6f6f6;
+      border-radius: 10px;
+      font-size: 17px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      > img {
+        width: 6px;
+        margin-left: 6px;
+      }
+    }
   }
 }
 
@@ -504,32 +532,6 @@ section {
         font-weight: 300;
         line-height: 1.6;
       }
-
-      > .btn-box {
-        display: flex;
-        margin-top: 40px;
-        gap: 6px;
-
-        > a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 258px;
-          height: 56px;
-          background-color: #f6f6f6;
-          border-radius: 10px;
-          font-size: 17px;
-
-          &:hover {
-            text-decoration: underline;
-          }
-
-          > img {
-            width: 6px;
-            margin-left: 6px;
-          }
-        }
-      }
     }
   }
 }
@@ -663,6 +665,9 @@ section {
 }
 
 .section7 {
+  $transition-duration: 1s;
+  $transition-delay: 1s;
+
   overflow: hidden;
   color: #fff;
   position: relative;
@@ -673,7 +678,7 @@ section {
     left: 0;
     height: 100%;
     width: 100%;
-    transition: all 1s 2s;
+    transition: all $transition-duration $transition-delay;
   }
   .bg-night {
     background-color: #343b56;
@@ -834,5 +839,69 @@ section {
   }
 }
 // ----------------------------- section7 end -----------------------------
+// ----------------------------- section8 start -----------------------------
+.section8 {
+  $swiper-card-width: 240px;
+
+  .container {
+    padding: 150px 0 0;
+    position: relative;
+
+    .text-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h3 {
+        font-size: 42px;
+      }
+
+      p {
+        margin-top: 30px;
+        font-size: 17px;
+      }
+    }
+
+    .card-swiper {
+      width: calc($swiper-card-width * 3);
+      margin: 100px auto;
+      overflow-x: hidden;
+      padding: 50px 0;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          width: $swiper-card-width;
+          transition: transform 0.3s;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+        .swiper-slide-active {
+          width: 280px;
+          transform: scale(1.25);
+          z-index: 1;
+        }
+      }
+    }
+
+    // prev/next btn
+    .btn {
+      position: absolute;
+      top: 70%;
+      cursor: pointer;
+    }
+
+    .prev-btn {
+      left: 5%;
+    }
+    .next-btn {
+      right: 5%;
+    }
+  }
+}
+
+// ----------------------------- section8 end -----------------------------
 
 // ----------------------------- main end -----------------------------
