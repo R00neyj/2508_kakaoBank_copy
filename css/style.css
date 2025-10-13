@@ -713,3 +713,144 @@ section .btn-box > a > img {
 .section8 .container .next-btn {
   right: 5%;
 }
+
+.section9 {
+  background-color: #f6f6f6;
+  position: relative;
+  width: 100%;
+}
+.section9 .container {
+  position: relative;
+  text-align: center;
+  padding: 160px 0 160px;
+  max-width: 1020px;
+  width: 100%;
+  z-index: 2;
+}
+.section9 .container > h2 {
+  font-size: 43px;
+  font-weight: 600;
+}
+.section9 .container .content-bar {
+  width: 100px;
+  height: 2px;
+  background-color: #222;
+  margin: 50px auto 140px;
+}
+.section9 .container .img-box {
+  margin: 0 auto;
+  position: relative;
+}
+.section9 .container .text-box {
+  display: flex;
+  font-size: 15px;
+  margin-top: 45px;
+  letter-spacing: -0.2px;
+}
+.section9 .container .text-box > li {
+  flex: 1 1 0;
+  font-weight: 200;
+  line-height: 1.7;
+}
+.section9 .container .text-box > li h4 {
+  font-size: 19px;
+  margin-bottom: 17px;
+}
+.section9 .content-bar-2 {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  position: absolute;
+  top: 64%;
+  left: 0;
+  z-index: 1;
+}
+
+footer {
+  background-color: #eee;
+  color: #666;
+}
+footer .container {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+footer .container .info {
+  padding: 20px 0;
+}
+footer .container .info a {
+  display: inline-block;
+}
+footer .container .info a.bold {
+  font-weight: 600;
+  color: #111;
+}
+footer .container .info a:hover {
+  text-decoration: underline;
+}
+footer .container .info span {
+  display: inline-block;
+  height: 10px;
+  width: 1px;
+  background-color: #d8d8d8;
+  margin: 0 15px;
+}
+footer .container .info-busi {
+  font-size: 13px;
+}
+footer .container .info-busi span {
+  padding-right: 6px;
+}
+footer .container .info-busi .tel {
+  color: #111;
+  font-weight: 400;
+}
+footer .container .info-copyright {
+  font-weight: 500;
+}
+footer .container .bottom {
+  display: flex;
+  gap: 20px;
+  padding: 12px 0 18px;
+}
+footer .container .bottom > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 800;
+}
+footer .container .bottom > a img {
+  width: 42px;
+}
+footer .container .bottom > a:nth-child(1) img {
+  width: 46px;
+}
+footer .container .bottom .sns-box {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+footer .container .bottom .sns-box li a {
+  overflow: hidden;
+}
+footer .container .bottom .sns-box li a .ico-sns {
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  background-image: url(/images/imgi_24_ico_sns.png);
+  background-repeat: no-repeat;
+}
+footer .container .bottom .sns-box li > .facebook .ico-sns {
+  background-position: 0 -90px;
+}
+footer .container .bottom .sns-box li > .instagram .ico-sns {
+  background-position: -191px -138px;
+}
+footer .container .bottom .sns-box li > .youtube .ico-sns {
+  background-position: -90px -90px;
+}
+footer .container .bottom .sns-box li > .brunch .ico-sns {
+  background-position: -217px -138px;
+}
