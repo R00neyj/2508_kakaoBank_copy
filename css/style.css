@@ -503,6 +503,9 @@ section .btn-box > a > img {
 .section7.animate .bg.bg-night {
   top: 0%;
 }
+.section7.animate .bg-moon > .moon:nth-child(1) {
+  background-color: #fff;
+}
 .section7.animate .bg-moon > .moon-out {
   opacity: 1;
   transform: translate(-25%, -25%);
@@ -522,7 +525,7 @@ section .btn-box > a > img {
   left: 0;
   height: 100%;
   width: 100%;
-  transition: all 1s 1s;
+  transition: all 1s 0.2s;
 }
 .section7 .bg-night {
   background-color: #343b56;
@@ -593,7 +596,8 @@ section .btn-box > a > img {
   width: 110px;
   height: 110px;
   border-radius: 999px;
-  background-color: #fff;
+  background-color: #ffe400;
+  transition: all 0.4s 0.8s;
 }
 .section7 .bg-moon .moon-out {
   position: absolute;
@@ -602,8 +606,8 @@ section .btn-box > a > img {
   width: 120px;
   height: 120px;
   background-color: #343b56;
-  transition: transform 0.7s, opacity 0s;
-  transition-delay: 2.35s;
+  transition: transform 0.8s, opacity 0s;
+  transition-delay: 0.65s;
 }
 .section7 .bg-star {
   position: absolute;
@@ -612,7 +616,7 @@ section .btn-box > a > img {
   right: 0;
   bottom: 0;
   transition: all 0.3s;
-  transition-delay: 2.4s;
+  transition-delay: 0.2s;
 }
 .section7 .bg-star .star {
   position: absolute;
@@ -635,7 +639,7 @@ section .btn-box > a > img {
   animation-duration: 3s;
 }
 .section7 .bg-star .star-3 {
-  top: 11%;
+  top: 58%;
   left: 17%;
   animation-duration: 4s;
 }

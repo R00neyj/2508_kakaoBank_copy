@@ -653,6 +653,9 @@ section {
   }
 
   .bg-moon {
+    > .moon:nth-child(1) {
+      background-color: #fff;
+    }
     > .moon-out {
       opacity: 1;
       transform: translate(-25%, -25%);
@@ -666,7 +669,7 @@ section {
 
 .section7 {
   $transition-duration: 1s;
-  $transition-delay: 1s;
+  $transition-delay: 0.2s;
 
   overflow: hidden;
   color: #fff;
@@ -757,11 +760,13 @@ section {
     top: 22%;
     right: 17%;
     overflow: hidden;
+
     .moon {
       width: 110px;
       height: 110px;
       border-radius: 999px;
-      background-color: #fff;
+      background-color: #ffe400;
+      transition: all 0.4s 0.8s;
     }
     .moon-out {
       position: absolute;
@@ -771,8 +776,8 @@ section {
       height: 120px;
 
       background-color: #343b56;
-      transition: transform 0.7s, opacity 0s;
-      transition-delay: 2.35s;
+      transition: transform 0.8s, opacity 0s;
+      transition-delay: 0.65s;
     }
   }
 
@@ -783,7 +788,7 @@ section {
     right: 0;
     bottom: 0;
     transition: all 0.3s;
-    transition-delay: 2.4s;
+    transition-delay: 0.2s;
 
     .star {
       position: absolute;
@@ -806,7 +811,7 @@ section {
         animation-duration: 3s;
       }
       &-3 {
-        top: 11%;
+        top: 58%;
         left: 17%;
         animation-duration: 4s;
       }
