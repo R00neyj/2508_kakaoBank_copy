@@ -688,13 +688,12 @@ section .btn-box > a > img {
 }
 .section8 .container .card-swiper {
   width: 720px;
-  margin: 100px auto;
+  margin: 72px auto;
   overflow-x: hidden;
   padding: 50px 0;
 }
 .section8 .container .card-swiper .swiper-wrapper .swiper-slide {
-  width: 240px;
-  transition: transform 0.3s;
+  transition: all 0.3s;
 }
 .section8 .container .card-swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
@@ -705,6 +704,12 @@ section .btn-box > a > img {
   width: 280px;
   transform: scale(1.25);
   z-index: 1;
+}
+.section8 .container .card-swiper .swiper-wrapper .swiper-slide-next {
+  left: -64px;
+}
+.section8 .container .card-swiper .swiper-wrapper .swiper-slide-prev {
+  right: -64px;
 }
 .section8 .container .btn {
   position: absolute;
